@@ -21,7 +21,24 @@ Learn Node.js by building real-world applications with Node, Express, MongoDB, J
 
 ## The Projects
 
-### A note-taking app 
+### A note-taking app
+
+Scripts you can run in your terminal within this app...
+
+* node app.js add --title="Title for the note" --body="The note itself."
+* node app.js remove --title="Title for the note"
+* node app.js list
+* node app.js read --title="Title for the note"
+
+For debugging...
+
+* Add the word `debugger` to the code.
+* Run the script `node inspect app.js` or `node --inspect-brk app.js` if you are getting an error. 
+* Go to Chrome and insert the following url `chrome://inspect/#devices`.
+* If necessary, go to `Discover network targets`'s `Configure...` button and add `localhost:9229` and/or `127.0.0.1:9229`.
+* Click one of the `Remote Target`'s `inspect` button. 
+* On the `Source` tap you can add your project under the `FileSystem`.
+* Inspect the information given to find your bug. 
 
 ### A weather application that interacts with the MapBox and Dark Sky APIs
 
