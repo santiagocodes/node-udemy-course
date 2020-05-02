@@ -1,34 +1,23 @@
-const request = require("postman-request");
-require("dotenv").config();
+const geocode = require("./utils/geocode.js");
+const forecast = require("./utils/forecast.js");
 
-const url = `http://api.weatherstack.com/current?access_key=${process.env.accessKey_weatherStack}&query=`;
+const address = process.argv[2];
 
-request({ url: url, json: true }, (error, response) => {
-  //   const data = JSON.parse(response.body); no longer needed because of `json: true`
-  if (error) {
-    console.log("Unable to connect to weather service :/");
-  } else if (response.body.error) {
-    console.log("Unable to find location.");
-  } else {
-    const degree = response.body.current.temperature;
-    const degreeFeel = response.body.current.feelslike;
-    const description = response.body.current.weather_descriptions[0];
-    console.log(
-      `${description}. It is currently ${degree} degrees out. It feels like ${degreeFeel} degrees.`
-    );
-  }
-});
-
-const geocodeURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/12what.json?proximity=-74.70850,40.78375&access_token=${process.env.accessKey_mapBox}&limit=1`;
-
-request({ url: geocodeURL, json: true }, (error, response) => {
-  if (error) {
-    console.log("Unable to connect to geocoding service :/");
-  } else if (response.body.features.length === 0) {
-    console.log("Unable to find location. Try another search.");
-  } else {
-    const latitude = response.body.features[0].center[1];
-    const longitude = response.body.features[0].center[0];
-    console.log(latitude, longitude);
-  }
-});
+if (!address) {
+  console.log("Please provide a location.");
+} else {
+  geocode(address, (error, data) => {
+    //geocode(address, (error, { latitude, longitude, location } = {}) => {    // Destructuring and Default Function Parameters
+    if (error) {
+      return console.log("Error: ", error);
+    }
+    forecast(data.latitude, data.longitude, (error, forecastData) => {
+      //forecast( latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return console.log("Error: ", error);
+      }
+      console.log(data.location);
+      console.log(forecastData);
+    });
+  });
+}
