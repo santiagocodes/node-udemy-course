@@ -4,22 +4,34 @@ const app = express();
 
 // app.com
 app.get("", (req, res) => {
-  res.send("Hello express!");
+  res.send("<h1>Weather</h1>");
 });
 
 // app.com/help
 app.get("/help", (req, res) => {
-  res.send("Help page");
+  res.send({
+    name: "Maria",
+    age: 30,
+  });
 });
 
 // app.com/about
 app.get("/about", (req, res) => {
-  res.send("Title of the about page.");
+  res.send("<h1>About</h1>");
 });
 
 // app.com/weather
 app.get("/weather", (req, res) => {
-  res.send("Title of the weather page.");
+  res.send([
+    {
+      forecast: 30,
+      location: "Madrid",
+    },
+    {
+      forecast: 25,
+      location: "London",
+    },
+  ]);
 });
 
 app.listen(3000, () => {
