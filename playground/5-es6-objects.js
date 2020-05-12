@@ -32,7 +32,7 @@ const transaction = (type, myProduct) => {
 
 //or//
 
-const transaction = (type, { label, stock }) => {
+const transaction = (type, { label, stock = 0 } = {}) => {
   console.log(type, label, stock);
 };
 
