@@ -20,7 +20,7 @@ Learn Node.js by building real-world applications with Node, Express, MongoDB, J
 
 :heavy_check_mark: Create real-time web apps with SocketIO
 
-## The Projects (and notes taken thoughout the course).
+## The Projects (and notes taken throughout the course).
 
 ### A Note-Taking App
 
@@ -40,8 +40,17 @@ Learn Node.js by building real-world applications with Node, Express, MongoDB, J
 - Click one of the `Remote Target`'s `inspect` button.
 - On the `Source` tap you can add your project under the `FileSystem`.
 - Inspect the information given to find your bug.
+___
 
 ### A Weather Application that Interacts with the MapBox and WeatherStack APIs
+
+#### My Weather App
+
+[![Weather-App video](https://i.postimg.cc/Z5JZ3pSv/weather-app-pic.png)](https://www.dropbox.com/s/by17ivtn9okk6be/weatherNode.mp4?dl=0)
+
+- [Live Demo](https://santiagocodes-weather-app.herokuapp.com/): This live demo is for the project I completed for the class.
+
+- [Github Repository](https://github.com/santiagocodes/weather-app-node): This is the github repository I created to contain my finished weather-app only. On this one I added different features that differ from the original project for this course (and on the repository you are currently on), like dark-mode and exploring with tailwindCSS.
 
 #### Scripts you can run in your terminal within this app...
 
@@ -74,14 +83,6 @@ Note: This starts up the local developement server easily. This is possible beca
 - To push to the Heroku remote, run `git push heroku master` on your terminal.
 
 Note: If you have your API keys hidden in .env you may have to configure the variables into your Heroku account via the dashboard. For more information on this, click [here](https://devcenter.heroku.com/articles/config-vars).
-
-#### My Weather App
-
-[![Weather-App video](https://i.postimg.cc/Z5JZ3pSv/weather-app-pic.png)](https://www.dropbox.com/s/by17ivtn9okk6be/weatherNode.mp4?dl=0 "Weather-App")
-
-- [Live Demo](https://santiagocodes-weather-app.herokuapp.com/): This live demo is for the project I completed for the class.
-
-- [Github Repository](https://github.com/santiagocodes/weather-app-node): This is the github repository I created to contain my finished weather-app only. On this one I added different features that differ from the original project for this course (and on the repository you are currently on), like dark-mode and exploring with tailwindCSS.
 
 ### A task manager REST API complete with user accounts and authentication
 
