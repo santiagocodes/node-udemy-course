@@ -55,14 +55,14 @@ Note: This starts up the local developement server easily. This is possible beca
 
 #### Heroku...
 
-- Sign up an account on (Heroku)[www.heroku.com].
-- Download the (Heroku CLI)[https://devcenter.heroku.com/articles/heroku-cli].
+- Sign up an account on [Heroku](www.heroku.com).
+- Download the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 - Restart the terminal.
 - Check if the tool has installed correctly by entering `heroku -v` on the terminal. If the output looks something like this `heroku/7.40.0 win32-x64 node-v12.16.2` it means everything went ok.
 - Run the command `heroku login`. This will allow you to link the commands you run in your terminal to your heroku account so you manage your projects from Visual Studio Code.
 - After running the previous command, press any key (except for `q`) which will open a new tap in the browser asking you to log in to your Heroku account.
 - After logging in you can close the tap.
-- For more information on this you can take a look at the (documentation)[https://devcenter.heroku.com/articles/deploying-nodejs] on deploying NodeJS apps on Heroku.
+- For more information on this you can take a look at the [documentation](https://devcenter.heroku.com/articles/deploying-nodejs) on deploying NodeJS apps on Heroku.
 
 - To set up your SSH public key file run the command `heroku keys:add` which will output the keys found and will ask you if you would like to upload it to Heroku? Type in `yes` and hit enter. Now that SSH key is associated with your Heroku account so that code can be sent back and forth safely.
 - To create your Heroku application run the command `heroku create` or `heroku create name-of-the-project`(which you should run from the root of your project). The name of the project has to be unique not only on your account, but all around the web.
@@ -73,15 +73,15 @@ Note: This starts up the local developement server easily. This is possible beca
 - Start the process of commiting your changes with `git status`, `git add .`, `git commit -m 'Setup app for Heroku'` and finally `git push`.
 - To push to the Heroku remote, run `git push heroku master` on your terminal.
 
-Note: If you have your API keys hidden in .env you may have to configure the variables into your Heroku account via the dashboard. For more information on this, click (here)[https://devcenter.heroku.com/articles/config-vars]
+Note: If you have your API keys hidden in .env you may have to configure the variables into your Heroku account via the dashboard. For more information on this, click [here](https://devcenter.heroku.com/articles/config-vars).
 
 #### My Weather App
 
-[![Weather-App video]({https://i.postimg.cc/Z5JZ3pSv/weather-app-pic.png})]({https://www.dropbox.com/s/by17ivtn9okk6be/weatherNode.mp4?dl=0} "Weather-App")
+[![Weather-App video](https://i.postimg.cc/Z5JZ3pSv/weather-app-pic.png)](https://www.dropbox.com/s/by17ivtn9okk6be/weatherNode.mp4?dl=0 "Weather-App")
 
-- (Live Demo)[https://santiagocodes-weather-app.herokuapp.com/]: This live demo is for the project I completed for the class.
+- [Live Demo](https://santiagocodes-weather-app.herokuapp.com/): This live demo is for the project I completed for the class.
 
-- (Github Repository)[https://github.com/santiagocodes/weather-app-node]: This is the github repository I created to contain my finished weather-app only. On this one I added different features that differ from the original project for this course (and on the repository you are currently on), like dark-mode and exploring with tailwindCSS.
+- [Github Repository](https://github.com/santiagocodes/weather-app-node): This is the github repository I created to contain my finished weather-app only. On this one I added different features that differ from the original project for this course (and on the repository you are currently on), like dark-mode and exploring with tailwindCSS.
 
 ### A task manager REST API complete with user accounts and authentication
 
